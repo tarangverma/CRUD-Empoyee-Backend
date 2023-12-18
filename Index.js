@@ -11,7 +11,7 @@ app.use(cors());
 app.use('/', routes);
 
 
-mongoose.connect('mongodb+srv://admin:12345@cluster0.kvp8cgu.mongodb.net/Node_API?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://admin:{password}@cluster0.kvp8cgu.mongodb.net/Node_API?retryWrites=true&w=majority')
 .then(() => {
     console.log('connected to db')
     app.listen(3000, () => {
